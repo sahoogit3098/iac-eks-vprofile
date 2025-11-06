@@ -1,6 +1,7 @@
 name: Vprofile-IAC-Terraform-Workflow-dev
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main # Trigger on pushes to the main branch
@@ -13,7 +14,7 @@ on:
       - main      # Trigger only on merge to main branches
     paths:
       - terraform/**  # Trigger only if files in the terraform directory are changed
-  #workflow_dispatch:
+  
 
 env:
     # Define your cloud provider credentials as environment variables or secrets
