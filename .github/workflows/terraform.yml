@@ -67,6 +67,10 @@ jobs:
       - name: terraform plan status
         if: steps.plan.outcome == 'failure'
         run: echo "Terraform plan failed. Please check the configuration."
+
+      - name: exit if failed
+        if: steps.plan.outcome == 'failure'
+        run: exit 1
         
     
      
