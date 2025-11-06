@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main # Trigger on pushes to the main branch
-     # - feature/* # Trigger on pushes to feature branches  
+      - feature/* # Trigger on pushes to feature branches  
     paths:
         - terraform/**  # Trigger only if files in the terraform directory are changed
 
@@ -13,7 +13,7 @@ on:
       - main      # Trigger only on merge to main branches
     paths:
       - terraform/**  # Trigger only if files in the terraform directory are changed
-  workflow_dispatch:
+  #workflow_dispatch:
 
 env:
     # Define your cloud provider credentials as environment variables or secrets
