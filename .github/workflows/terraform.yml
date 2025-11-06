@@ -44,7 +44,7 @@ jobs:
 
       - name: Terraform Init
         id: init
-        run: sterraform init -backend-config="bucket=${{ env.TF_s3_bucket }}" -backend-config="region=${{ env.AWS_REGION }}" -backend-config="key=${{ env.EKS_CLUSTER_NAME }}/terraform.tfstate"
+        run: terraform init -backend-config="bucket=${{ env.TF_s3_bucket }}" -backend-config="region=${{ env.AWS_REGION }}" -backend-config="key=${{ env.EKS_CLUSTER_NAME }}/terraform.tfstate"
      
       - name: Terraform fmt Check
         id: fmt
