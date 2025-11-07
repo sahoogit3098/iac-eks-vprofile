@@ -26,12 +26,6 @@ terraform {
     }
   }
 
-  backend "s3" {
-    bucket = "vprofile3098"
-    key    = "terraform.tfstate"
-    region = "ap-south-1"
-  }
-
   required_version = "~> 1.12.1"
 }
 ###
